@@ -1,0 +1,106 @@
+{
+  "classes": [
+    "acute_bronchitis",
+    "strep_pharyngitis",
+    "viral_pharyngitis",
+    "viral_sinusitis"
+  ],
+  "n_features": 515,
+  "categorical": [
+    "gender",
+    "race",
+    "ethnicity",
+    "state",
+    "marital_at_visit"
+  ],
+  "baseline_lr": {
+    "macro_f1": 0.6285,
+    "logloss": 1.3096
+  },
+  "search_time_sec": 143.1,
+  "best_params": {
+    "num_leaves": 31,
+    "learning_rate": 0.03,
+    "min_child_samples": 20,
+    "feature_fraction": 0.5,
+    "bagging_fraction": 1.0,
+    "lambda_l2": 5.0,
+    "bagging_freq": 1
+  },
+  "best_oof_logloss": 0.50844,
+  "best_oof_macro_f1_argmax": 0.6665,
+  "best_mean_iter": 298,
+  "class_weights": {
+    "acute_bronchitis": 0.5743,
+    "strep_pharyngitis": 2.0,
+    "viral_pharyngitis": 0.8706,
+    "viral_sinusitis": 1.1487
+  },
+  "oof_macro_f1_tuned_in_sample": 0.6962,
+  "split_half_check": [
+    {
+      "tuned_on": 0,
+      "test_on": 1,
+      "untuned_f1": 0.6613,
+      "tuned_f1": 0.6697
+    },
+    {
+      "tuned_on": 1,
+      "test_on": 0,
+      "untuned_f1": 0.6714,
+      "tuned_f1": 0.6948
+    }
+  ],
+  "final_rounds": 327,
+  "test_pred_distribution": {
+    "viral_sinusitis": 559,
+    "viral_pharyngitis": 354,
+    "acute_bronchitis": 346,
+    "strep_pharyngitis": 141
+  },
+  "train_distribution": {
+    "viral_sinusitis": 0.4111,
+    "viral_pharyngitis": 0.2736,
+    "acute_bronchitis": 0.2611,
+    "strep_pharyngitis": 0.0542
+  },
+  "oof_classification_report": {
+    "acute_bronchitis": {
+      "precision": 0.8725146198830409,
+      "recall": 0.7936170212765957,
+      "f1-score": 0.8311977715877438,
+      "support": 940.0
+    },
+    "strep_pharyngitis": {
+      "precision": 0.3108108108108108,
+      "recall": 0.4717948717948718,
+      "f1-score": 0.37474541751527496,
+      "support": 195.0
+    },
+    "viral_pharyngitis": {
+      "precision": 0.7058177826564215,
+      "recall": 0.6527918781725889,
+      "f1-score": 0.6782700421940928,
+      "support": 985.0
+    },
+    "viral_sinusitis": {
+      "precision": 0.8836150845253576,
+      "recall": 0.9182432432432432,
+      "f1-score": 0.9005964214711729,
+      "support": 1480.0
+    },
+    "accuracy": 0.7888888888888889,
+    "macro avg": {
+      "precision": 0.6931895744689077,
+      "recall": 0.7091117536218249,
+      "f1-score": 0.6962024131920711,
+      "support": 3600.0
+    },
+    "weighted avg": {
+      "precision": 0.8010424143922975,
+      "recall": 0.7888888888888889,
+      "f1-score": 0.7931610991795764,
+      "support": 3600.0
+    }
+  }
+}

@@ -1,0 +1,57 @@
+Description
+Tujuan penugasan ini adalah mengembangkan model machine learning relasional yang mampu:
+
+Menggabungkan data rekam medis dari banyak tabel relasional (multi-CSV).
+Menangani missing values, pola temporal, dan agregasi data medis.
+Memprediksi diagnosis pasien ke dalam salah satu dari 4 kelas.
+Mencegah kebocoran data (data leakage) berbasis waktu (temporal cutoff).
+Peserta bebas menentukan metode pemrosesan dan feature engineering, termasuk:
+
+Agregasi riwayat kesehatan dari patients, conditions, observations, medications, procedures, dll.
+Pengolahan tanda vital (triage vitals) dan gejala klinis (symptoms).
+Algoritma seperti XGBoost, LightGBM, CatBoost, atau Neural Networks.
+Strategi penanganan class imbalance dan optimasi hyperparameter.
+Target Classes
+Kolom target_class berisi salah satu dari empat label berikut:
+
+Label	Keterangan
+viral_sinusitis	Sinusitis viral
+viral_pharyngitis	Faringitis viral
+acute_bronchitis	Bronkitis akut
+strep_pharyngitis	Faringitis streptokokus (kelas minoritas)
+
+Evaluation
+Submission dievaluasi menggunakan Macro F1-Score pada keempat kelas.
+
+Untuk setiap kelas $c$:
+
+dengan $N = 4$. Macro F1 memberi bobot sama pada setiap kelas tanpa memandang jumlah sampelnya, sehingga model tidak boleh hanya fokus pada kelas mayoritas.
+
+Leaderboard Split
+Public Leaderboard: sekitar 30% data uji, selama masa pengerjaan.
+Private Leaderboard: sekitar 70% sisanya, menentukan peringkat akhir.
+Catatan Penilaian: Skor Private Leaderboard menyumbang 20% dari total penilaian seleksi GDGoC UGM Academic Hacker 2026/2027 (Jupyter Notebook 40%, Write-Up PDF 40%).
+
+Dataset Description
+File utama
+File	Isi
+train.csv	3.600 baris: sample_id, patient_id, encounter_id, target_class
+test.csv	1.400 baris: sample_id, patient_id, encounter_id (tanpa label)
+sample_submission.csv	Contoh format submission
+index_encounters.csv	Kunjungan yang diprediksi, beserta prediction_time
+patients.csv	Demografi: usia saat kunjungan, gender, ras, etnis, lokasi, pendapatan, status pernikahan
+Data triase
+File	Isi
+triage_vitals.csv	Tanda vital (vital_name, value, unit, measured_at)
+triage_symptoms.csv	Gejala yang teramati (symptom_concept, observed_at)
+triage_symptom_severity.csv	Skor keparahan tiap gejala (severity_score)
+presenting_complaints.csv	Teks keluhan utama pasien
+Riwayat medis
+File	Isi
+previous_encounter.csv	Riwayat kunjungan sebelumnya (jenis, waktu mulai dan selesai, deskripsi)
+conditions.csv	Kondisi atau diagnosis terdahulu
+observations.csv	Hasil observasi dan laboratorium
+medications.csv	Riwayat obat
+procedures.csv	Riwayat tindakan medis
+immunizations.csv	Riwayat imunisasi
+allergies.csv	Riwayat alergi

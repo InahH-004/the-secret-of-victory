@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/NusaX/nusax" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/not-a-super-secret-weapon" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/the-secret-of-victory" vcs="Git" />
+  </component>
+</project>

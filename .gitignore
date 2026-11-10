@@ -1,0 +1,30 @@
+not-a-super-secret-weapon/
+pretrained/
+.venv/
+ai-of-god-5/
+Indonesian -Abusive-and Hate-Speech-Twitter/data_latihan_hs/outputs/bert_seed42.pt
+Gemastik 2022 Dataset/outputs/best_model.pt
+mercari-price-suggestion-challenge/train.tsv
+mercari-price-suggestion-challenge/test_stg2.tsv.zip
+nlp-getting-started/distilbert_disaster_tweets_pt/model.safetensors
+Gemastik 2022 Dataset/train.csv
+mercari-price-suggestion-challenge/test.tsv
+Gemastik 2022 Dataset/test.csv
+mercari-price-suggestion-challenge/train.tsv.7z
+jigsaw-toxic-comment-classification-challenge/train.csv
+*.pt
+*.safetensors
+*.zip
+*.7z
+*.png
+*.jpg
+*.jpeg
+*.csv
+*.tsv
+NusaX/
+the-secret-of-victory/
+outputs/
+*.xlsx
+*.html
+*.pptx
+*.npz

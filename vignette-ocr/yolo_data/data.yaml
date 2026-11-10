@@ -1,0 +1,6 @@
+path: C:/INAH-MINE/GEMASTIK-XIX/vignette-ocr/yolo_data
+train: images/train
+val: images/val
+names:
+  0: entete
+  1: vin

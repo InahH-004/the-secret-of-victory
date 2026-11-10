@@ -1,0 +1,3 @@
+- merge 3 file di triase, file presenting_complaints tidak diperlukan sebab isinya sudah ada di triage_symptoms
+- alergic hanya 2 baris (pertimbangkan drop/tidak dipedulikan)
+- Condition dan immunization ada null, tpi berpola,lakukan unique, fillna berdasarkan kolom code yang sama
